@@ -1,0 +1,3 @@
+<div class="message" id="m{{ message["id"] }}">
+<i>{{ message["time"] }}</i> {% if message["is_private"] %}<b>PRIVATE</b> message from <u>{{ message["from_username"] }}</u>--><br>{% else %}<b>{{ message["from_username"] }}</b> -->{% end %} {% module linkify(message["body"]) %}
+</div>
