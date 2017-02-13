@@ -1,20 +1,20 @@
 A Tornado based basic messaging application, which makes persistent connections with all clients. Requires Python3+.
 
 
-Goals:
+3 Goals:
 -------
 
-1. Maintaining a persistent socket connection to every mobile device that has requested a connection to the server.
+- Maintaining a persistent socket connection to every mobile device that has requested a connection to the server.
 
 => The server maintains a persistent connection to every client
 
 
-2. 	Routes messages tagged with the destinationId to a particular mobile device.
+- Routes messages tagged with the destinationId to a particular mobile device.
 
 => When a message is sent to a user with "@john <MESSAGE TEXT>", wherever the user john is logged in from right now, the message gets delivered there. Similarly, any user can be sent a message.
 
 
-3. Does not send duplicate messages. Defined as ((“message1, destinationId1” == “message2, destinationId2”) && (arrivalTime2-arrivalTime1)<= 5sec)
+- Does not send duplicate messages. Defined as ((“message1, destinationId1” == “message2, destinationId2”) && (arrivalTime2-arrivalTime1)<= 5sec)
 
 => If a user sends the same message to any users more than once within a 5 second window, the new messages are ignored by the server.
 
