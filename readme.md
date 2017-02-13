@@ -19,15 +19,15 @@ A Tornado based basic messaging application, which makes persistent connections 
 => If a user sends the same message to any users more than once within a 5 second window, the new messages are ignored by the server.
 
 
-How to:
+How:
 -------
 
 Run the server using "python3 run_server.py" in terminal. It will be accessible on localhost:8888
 
 As of now, no password authentication is there.
+
 If you want to login as user "hodor", go to "localhost:8888?username=hodor"
 
-Password authentication will be there soon!
 
 
 Requires:
