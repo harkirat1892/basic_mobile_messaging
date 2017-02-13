@@ -13,6 +13,9 @@ Goals:
 => If a user sends the same message to any users more than once within a 5 second window, the new messages are ignored by the server.
 
 
+How to run:
+"python3 run_server.py" in terminal will start the server. It will be accessible on localhost:8888
+
 
 Requires:
 
