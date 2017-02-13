@@ -2,6 +2,7 @@ A Tornado based basic messaging application, which makes persistent connections 
 
 
 Goals:
+-------
 
 1. Maintaining a persistent socket connection to every mobile device that has requested a connection to the server.
 => The server maintains a persistent connection to every client
@@ -13,23 +14,30 @@ Goals:
 => If a user sends the same message to any users more than once within a 5 second window, the new messages are ignored by the server.
 
 
-How to run:
-"python3 run_server.py" in terminal will start the server. It will be accessible on localhost:8888
+How to:
+-------
+
+Run the server using "python3 run_server.py" in terminal. It will be accessible on localhost:8888
+
+As of now, no password authentication is there.
+If you want to login as user "hodor", go to "localhost:8888?username=hodor"
+
+Password authentication will be there soon!
 
 
 Requires:
+-------
 
-
-MongoDB (https://www.mongodb.com/)
+'MongoDB <https://www.mongodb.com>'_
 => MongoDB is used to maintain a list of registered users, and to keep track of messages being sent.
 If an offline user receives messages, they are saved in the MongoDB "messages" collection and flagged as pending. Once the user logs in, all pending messages are delivered to the user.
 
 
-PyMongo (https://api.mongodb.com/python/current/)
+'PyMongo <https://api.mongodb.com/python/current>'_
 => The Python distribution to work with MongoDB.
 
 
-Tornado (http://www.tornadoweb.org/en/stable/)
+'Tornado <http://www.tornadoweb.org>'_
 => Python web framework that helps in keeping connections persistent. Highly scalable as compared to most other frameworks.
 
 
