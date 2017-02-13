@@ -17,7 +17,7 @@ Goals:
 Requires:
 
 
-MongoDB:
+MongoDB (https://www.mongodb.com/)
 => MongoDB is used to maintain a list of registered users, and to keep track of messages being sent.
 If an offline user receives messages, they are saved in the MongoDB "messages" collection and flagged as pending. Once the user logs in, all pending messages are delivered to the user.
 
