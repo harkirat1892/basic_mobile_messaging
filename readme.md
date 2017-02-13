@@ -28,16 +28,16 @@ Password authentication will be there soon!
 Requires:
 -------
 
-'MongoDB <https://www.mongodb.com>'_
+MongoDB <https://www.mongodb.com>
 => MongoDB is used to maintain a list of registered users, and to keep track of messages being sent.
 If an offline user receives messages, they are saved in the MongoDB "messages" collection and flagged as pending. Once the user logs in, all pending messages are delivered to the user.
 
 
-'PyMongo <https://api.mongodb.com/python/current>'_
+PyMongo <https://api.mongodb.com/python/current>
 => The Python distribution to work with MongoDB.
 
 
-'Tornado <http://www.tornadoweb.org>'_
+Tornado <http://www.tornadoweb.org>
 => Python web framework that helps in keeping connections persistent. Highly scalable as compared to most other frameworks.
 
 
